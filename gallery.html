@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gallery — ExploreTN</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* Header styles */
+    .site-header {
+      background: #2c3e50;
+      color: white;
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+    }
+    .brand {
+      font-size: 22px;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+    }
+    .main-nav {
+      display: flex;
+      gap: 20px;
+    }
+    .nav-item {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+    .nav-item:hover, .nav-item.active {
+      color: #f39c12;
+    }
+    .mobile-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    /* Book Now button */
+    .book-btn {
+      background: #f39c12;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 5px;
+      font-size: 15px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .book-btn:hover {
+      background: #e67e22;
+    }
+
+    /* Responsive */
+    @media(max-width: 768px) {
+      .main-nav {
+        display: none;
+        flex-direction: column;
+        background: #34495e;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 15px;
+      }
+      .main-nav.show {
+        display: flex;
+      }
+      .mobile-toggle {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">ExploreTN</a>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-item active">Home</a>
+        <a href="about.html" class="nav-item">About</a>
+        <a href="reviews.html" class="nav-item">Reviews</a>
+        <a href="gallery.html" class="nav-item">Gallery</a>
+        <a href="contact.html" class="nav-item">Contact</a>
+        <button class="book-btn" id="bookNow">Book Now</button>
+      </nav>
+      <button class="mobile-toggle" aria-label="toggle navigation"><i class="fa fa-bars"></i></button>
+    </div>
+  </header>
+</head>
+<body>
+
+  <main class="container page gallery-page">
+    <h1>Gallery</h1>
+    <p class="lead">A visual tour across Tamil Nadu — click to enlarge.</p>
+
+    <div class="gallery-grid" id="galleryGrid">
+      <!-- Each figure uses a medium-sized image; change to your own images in img/ -->
+      <figure class="gallery-item"><img src="assets/Meenakshi Temple.jpeg" alt=""><figcaption>Meenakshi Amman Temple, Madurai</figcaption></figure>
+      <figure class="gallery-item"><img src="assets/Ooty hills.jpeg" alt=""><figcaption>Tea gardens, Ooty</figcaption></figure>
+      <figure class="gallery-item"><img src="assets/Pamban Bridge.jpg" alt=""><figcaption>Pamban Bridge</figcaption></figure>
+      <figure class="gallery-item"><img src="assets/Thanjavur.jpeg" alt=""><figcaption>Shore temples, Mahabalipuram</figcaption></figure>
+      <figure class="gallery-item"><img src="assets/Silver beach.jpeg" alt=""><figcaption>Marina Beach, Chennai</figcaption></figure>
+      <figure class="gallery-item"><img src="assets/Thanjavur.jpeg" alt=""><figcaption>Thanjavur</figcaption></figure>
+      <figure class="gallery-item"><img src="assets/Thanjavur.jpeg" alt=""><figcaption>Bhagwan nataraja temple</figcaption></figure>
+      <figure class="gallery-item"><img src="assets/Thanjavur.jpeg" alt=""><figcaption>Thiruvaluvar</figcaption></figure>
+      <figure class="gallery-item"><img src="assets/Pamban Bridge.jpg" alt=""><figcaption>Pamban Bridge</figcaption></figure>
+      <figure class="gallery-item"><img src="assets/Senji fort.jpeg" alt=""><figcaption>Senji fort</figcaption></figure>
+      <figure class="gallery-item"><img src="assets/Neyveli Lignite plant.jpeg" alt=""><figcaption>Neyveli Lignite plant</figcaption></figure>
+      <figure class="gallery-item"><img src="assets/Thanjavur.jpeg" alt=""><figcaption>Trichy Ucchi pillayar temple</figcaption></figure>
+      <figure class="gallery-item"><img src="assets/Pichavaram mangrove forest.jpeg" alt=""><figcaption>Pichavaram mangrove forest</figcaption></figure>
+      <figure class="gallery-item"><img src="assets/Thanjavur.jpeg" alt=""><figcaption>Vadalur vallalar temple</figcaption></figure>
+      <figure class="gallery-item"><img src="assets/Silver beach.jpeg" alt=""><figcaption>Veeranam lake</figcaption></figure>
+      <figure class="gallery-item"><img src="assets/Thanjavur.jpeg" alt=""><figcaption>Vellore golden temple</figcaption></figure>
+      <figure class="gallery-item"><img src="assets/Veeranam tank.jpeg" alt=""><figcaption>Veeranam tank</figcaption></figure>
+      <figure class="gallery-item"><img src="assets/Ooty hills.jpeg" alt=""><figcaption>Yercaud</figcaption></figure>
+      <figure class="gallery-item"><img src="assets/Anaimalai hills.jpeg" alt=""><figcaption>Anaimalai hills</figcaption></figure>
+      <figure class="gallery-item"><img src="assets/Silver beach.jpeg" alt=""><figcaption>Karaikal beach pondicherry</figcaption></figure>
+      <figure class="gallery-item"><img src="assets/Manimuthar dam.jpeg" alt=""><figcaption>Manimuthar dam</figcaption></figure>
+      <figure class="gallery-item"><img src="assets/Manimuthar dam.jpeg" alt=""><figcaption>Mettur dam</figcaption></figure>
+      <figure class="gallery-item"><img src="assets/Pollachi.jpeg" alt=""><figcaption>Pollachi</figcaption></figure>
+      <figure class="gallery-item"><img src="assets/poompuhar beach waterfall.jpeg" alt=""><figcaption>poompuhar beach waterfall</figcaption></figure>
+      <figure class="gallery-item"><img src="assets/poompuhar light.jpeg" alt=""><figcaption>Poompuhar light house</figcaption></figure>
+      <figure class="gallery-item"><img src="assets/Thanjavur.jpeg" alt=""><figcaption>Thirunallar temple karaikal</figcaption></figure>
+      <figure class="gallery-item"><img src="assets/Pamban Bridge.jpg" alt=""><figcaption>Valparai bridge</figcaption></figure>
+      <figure class="gallery-item"><img src="assets/Senji fort.jpeg" alt=""><figcaption>Valparai fort</figcaption></figure>
+      <figure class="gallery-item"><img src="assets/Meenakshi Temple.jpeg" alt=""><figcaption>virudhagireeswarar temple</figcaption></figure>
+    </div>
+
+    <style>
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Large responsive blocks */
+  gap: 20px;
+  padding: 40px;
+  max-width: 1400px;
+  margin: 0 auto; /* Center whole grid */
+}
+
+.gallery-item {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.gallery-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 300px; /* bigger images */
+  object-fit: cover; /* keeps proportions nice */
+  display: block;
+}
+
+.gallery-item figcaption {
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  background: #f8f8f8;
+}
+</style>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+      <button class="lb-close" aria-label="close (Esc)">&times;</button>
+      <button class="lb-prev" aria-label="previous"><i class="fa fa-chevron-left"></i></button>
+      <div class="lb-content"><img src="" alt=""></div>
+      <button class="lb-next" aria-label="next"><i class="fa fa-chevron-right"></i></button>
+    </div>
+  </main>
+
+  <style>
+/* ===== Gallery Grid ===== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+/* Gallery Item Animation */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+  transform: translateY(40px) scale(0.95);
+  opacity: 0;
+  animation: fadeSlide 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Stagger each item */
+.gallery-item:nth-child(1) { animation-delay: 0.2s; }
+.gallery-item:nth-child(2) { animation-delay: 0.4s; }
+.gallery-item:nth-child(3) { animation-delay: 0.6s; }
+.gallery-item:nth-child(4) { animation-delay: 0.8s; }
+.gallery-item:nth-child(5) { animation-delay: 1s; }
+.gallery-item:nth-child(6) { animation-delay: 1.2s; }
+
+/* Fade + Slide Animation */
+@keyframes fadeSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95) rotate(-2deg);
+  }
+  50% {
+    opacity: 0.7;
+    transform: translateY(-10px) scale(1.02) rotate(1deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(0);
+  }
+}
+
+/* Image Hover */
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08) rotate(1deg);
+  filter: brightness(1.1);
+}
+
+/* Caption Styling */
+.gallery-item figcaption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 12px 15px;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.gallery-item:hover figcaption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Lightbox Styling ===== */
+.lightbox {
+  display: none;
+  position: fixed;
+  top:0; left:0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.lightbox.active {
+  display: flex;
+  opacity: 1;
+}
+
+.lb-content img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 12px;
+  animation: lbZoom 0.5s ease;
+}
+
+@keyframes lbZoom {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Lightbox buttons */
+.lb-close, .lb-prev, .lb-next {
+  position: absolute;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.lb-close { top: 20px; right: 20px; }
+.lb-prev { left: 20px; top: 50%; transform: translateY(-50%); }
+.lb-next { right: 20px; top: 50%; transform: translateY(-50%); }
+
+.lb-close:hover, .lb-prev:hover, .lb-next:hover {
+  transform: scale(1.2);
+}
+
+
+  </style>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <h4>ExploreTN</h4>
+        <p>Visual stories from Tamil Nadu.</p>
+      </div>
+    </div>
+    <div class="copyright">© <span id="year4"></span> ExploreTN • All rights reserved</div>
+  </footer>
+
+  <style>
+     /* Center the copyright text */
+.copyright {
+  margin-top: 0%;
+  text-align: center;       /* centers the text */
+  padding:5px 0px;          /* optional spacing */
+  font-size: 14px;          /* adjust font size */
+  color: #555;              /* text color */
+  background-color: #f5f5f5; /* optional background */
+}
+
+/* Optional: make it slightly bold */
+.copyright span {
+  font-weight: 500;
+}
+  </style>
+
+  <script src="script.js"></script>
+</body>
+</html> 

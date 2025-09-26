@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Reviews — ExploreTN</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* Header styles */
+    .site-header {
+      background: #2c3e50;
+      color: white;
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+    }
+    .brand {
+      font-size: 22px;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+    }
+    .main-nav {
+      display: flex;
+      gap: 20px;
+    }
+    .nav-item {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+    .nav-item:hover, .nav-item.active {
+      color: #f39c12;
+    }
+    .mobile-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    /* Book Now button */
+    .book-btn {
+      background: #f39c12;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 5px;
+      font-size: 15px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .book-btn:hover {
+      background: #e67e22;
+    }
+
+    /* Responsive */
+    @media(max-width: 768px) {
+      .main-nav {
+        display: none;
+        flex-direction: column;
+        background: #34495e;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 15px;
+      }
+      .main-nav.show {
+        display: flex;
+      }
+      .mobile-toggle {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">ExploreTN</a>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-item active">Home</a>
+        <a href="about.html" class="nav-item">About</a>
+        <a href="reviews.html" class="nav-item">Reviews</a>
+        <a href="gallery.html" class="nav-item">Gallery</a>
+        <a href="contact.html" class="nav-item">Contact</a>
+        <button class="book-btn" id="bookNow">Book Now</button>
+      </nav>
+      <button class="mobile-toggle" aria-label="toggle navigation"><i class="fa fa-bars"></i></button>
+    </div>
+  </header>
+
+  <main class="container page reviews-page">
+    <h1>Traveler Reviews</h1>
+    <p class="lead">Real stories from people who explored Tamil Nadu with curiosity and heart.</p>
+
+    <div class="reviews-carousel" id="reviewsCarousel">
+      <button class="prev"><i class="fa fa-chevron-left"></i></button>
+      <div class="slides">
+        <article class="review active">
+          <p>"Ooty's tea gardens and chilly mornings were a dream. Host family was warm and food was amazing."</p>
+          <cite>— Priya, Bangalore</cite>
+        </article>
+        <article class="review">
+          <p>"Madurai's Meenakshi — the carvings and colours are something I will never forget."</p>
+          <cite>— Marco, Italy</cite>
+        </article>
+        <article class="review">
+          <p>"Rameswaram's calm evenings on the shore were a soulful experience."</p>
+          <cite>— Aniket, Pune</cite>
+        </article>
+      </div>
+      <button class="next"><i class="fa fa-chevron-right"></i></button>
+    </div>
+
+    <section class="add-review">
+      <h3>Share your experience</h3>
+      <form id="reviewForm">
+        <input type="text" id="revName" placeholder="Your name" required>
+        <textarea id="revText" placeholder="Your review" rows="4" required></textarea>
+        <button class="btn" type="submit">Submit Review</button>
+        <div id="revMsg" class="form-msg"></div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <h4>ExploreTN</h4>
+        <p>Discover Tamil Nadu — one review at a time.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="copyright">© <span id="year3"></span> ExploreTN • All rights reserved</div>
+  </footer>
+
+  
+   <style>
+
+     /* Center the copyright text */
+.copyright {
+  margin-top: 0%;
+  text-align: center;       /* centers the text */
+  padding:5px 0px;          /* optional spacing */
+  font-size: 14px;          /* adjust font size */
+  color: #555;              /* text color */
+  background-color: #f5f5f5; /* optional background */
+}
+
+/* Optional: make it slightly bold */
+.copyright span {
+  font-weight: 500;
+}
+    .footer-links {
+  display: flex;
+  gap: 20px;
+  justify-content: center; /* center in footer */
+  margin-top: 20px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Assign different colors */
+.footer-links a:nth-child(1) { color: #ff5722; } /* About - Orange */
+.footer-links a:nth-child(2) { color: #4caf50; } /* Gallery - Green */
+.footer-links a:nth-child(3) { color: #2196f3; } /* Contact - Blue */
+
+/* Hover effect */
+.footer-links a:hover {
+  transform: scale(1.1);
+  text-decoration: underline;
+}
+
+  </style>
+
+  <script src="script.js"></script>
+</body>
+</html>

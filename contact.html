@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — ExploreTN</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <style>
+    /* Header styles */
+    .site-header {
+      background: #2c3e50;
+      color: white;
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+    }
+    .brand {
+      font-size: 22px;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+    }
+    .main-nav {
+      display: flex;
+      gap: 20px;
+    }
+    .nav-item {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+    .nav-item:hover, .nav-item.active {
+      color: #f39c12;
+    }
+    .mobile-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    /* Book Now button */
+    .book-btn {
+      background: #f39c12;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 5px;
+      font-size: 15px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .book-btn:hover {
+      background: #e67e22;
+    }
+
+    /* Responsive */
+    @media(max-width: 768px) {
+      .main-nav {
+        display: none;
+        flex-direction: column;
+        background: #34495e;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 15px;
+      }
+      .main-nav.show {
+        display: flex;
+      }
+      .mobile-toggle {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">ExploreTN</a>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-item active">Home</a>
+        <a href="about.html" class="nav-item">About</a>
+        <a href="reviews.html" class="nav-item">Reviews</a>
+        <a href="gallery.html" class="nav-item">Gallery</a>
+        <a href="contact.html" class="nav-item">Contact</a>
+        <button class="book-btn" id="bookNow">Book Now</button>
+      </nav>
+      <button class="mobile-toggle" aria-label="toggle navigation"><i class="fa fa-bars"></i></button>
+    </div>
+  </header>
+
+  <main class="container page contact-page">
+    <h1>Contact Us</h1>
+    <p class="lead">Have questions or want help planning? Send us a message.</p>
+
+    <div class="contact-grid">
+      <form id="contactForm" class="contact-form">
+        <label>
+          <span>Your name</span>
+          <input type="text" id="name" required>
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" id="email" required>
+        </label>
+        <label>
+          <span>Message</span>
+          <textarea id="message" rows="6" required></textarea>
+        </label>
+        <button class="btn" id="msg" type="submit">Send Message</button>
+        <div id="contactMsg" class="form-msg"></div>
+      </form>
+
+      <aside class="contact-info">
+        <h3>Visit / Call</h3>
+        <p><strong>ExploreTN</strong><br>Chennai, Tamil Nadu<br>Phone: +91 98765 43210</p>
+        <h4>Office Hours</h4>
+        <p>Mon — Sat: 9:30am — 6:00pm</p>
+        <h4>Follow</h4>
+        <div class="socials">
+          <a href="#" aria-label="facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#" aria-label="instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <style>
+    /* Button styling */
+.btn {
+  background-color: #ff5722; /* orange color */
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition:background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #e64a19; /* darker on hover */
+  transform: scale(1.05);
+}
+
+/* Success message */
+.form-msg {
+  margin-top: 15px;
+  font-size: 14px;
+  color: green;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* Show success message */
+.form-msg.show {
+  opacity: 1;
+}
+
+  </style>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <h4>ExploreTN</h4>
+      </div>
+    </div>
+    <div class="copyright">© <span id="year5"></span> ExploreTN • All rights reserved</div>
+  </footer>
+
+  <style>
+     /* Center the copyright text */
+.copyright {
+  margin-top: 0%;
+  text-align: center;       /* centers the text */
+  padding:5px 0px;          /* optional spacing */
+  font-size: 14px;          /* adjust font size */
+  color: #555;              /* text color */
+  background-color: #f5f5f5; /* optional background */
+}
+
+/* Optional: make it slightly bold */
+.copyright span {
+  font-weight: 500;
+}
+  </style>
+
+  <script>
+  const form = document.getElementById("contactForm");
+  const contactMsg = document.getElementById("contactMsg");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); // stop form from reloading page
+
+    // You can add real sending logic here (e.g., backend or email API)
+
+    contactMsg.textContent = "✅ Your message has been sent successfully!";
+    contactMsg.style.color = "green";
+    contactMsg.style.marginTop = "10px";
+
+    // clear inputs
+    form.reset();
+
+    // hide message after 5 seconds
+    setTimeout(() => {
+      contactMsg.textContent = "";
+    }, 5000);
+  });
+
+  var btn = document.getElementById("msg")
+    btn.addEventListener("click",function(){
+      alert(" Email send Successfuly!")
+    });
+</script>
+
+  <script src="script.js"></script>
+</body>
+</html>

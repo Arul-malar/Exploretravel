@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Travel Agency— Tamil Nadu</title>
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <style>
+    /* Header styles */
+    .site-header {
+      background: #2c3e50;
+      color: white;
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+    }
+    .brand {
+      font-size: 22px;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+    }
+    .main-nav {
+      display: flex;
+      gap: 20px;
+    }
+    .nav-item {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+    .nav-item:hover, .nav-item.active {
+      color: #f39c12;
+    }
+    .mobile-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    /* Book Now button */
+    .book-btn {
+      background: #f39c12;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 5px;
+      font-size: 15px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .book-btn:hover {
+      background: #e67e22;
+    }
+
+    /* Responsive */
+    @media(max-width: 768px) {
+      .main-nav {
+        display: none;
+        flex-direction: column;
+        background: #34495e;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 15px;
+      }
+      .main-nav.show {
+        display: flex;
+      }
+      .mobile-toggle {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">ExploreTN</a>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-item active">Home</a>
+        <a href="about.html" class="nav-item">About</a>
+        <a href="reviews.html" class="nav-item">Reviews</a>
+        <a href="gallery.html" class="nav-item">Gallery</a>
+        <a href="contact.html" class="nav-item">Contact</a>
+        <button class="book-btn" id="bookNow">Book Now</button>
+      </nav>
+      <button class="mobile-toggle" aria-label="toggle navigation"><i class="fa fa-bars"></i></button>
+    </div>
+  </header>
+
+ 
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-overlay">
+        <img src="assets/stubaital-valley-tirol-austria.jpg" alt="" width="100%">
+      </div>
+      <div class="container hero-inner">
+        <h4 class="eyebrow">The Land of Serene Beauty</h4>
+        <h1>TAMILNADU</h1>
+        <p class="lead">Ancient temples, misty hill stations, golden beaches and centuries of living culture. Discover Tamil Nadu — where every path tells a story.</p>
+        <div class="hero-cta1">
+          <a href="gallery.html" class="btn">Explore Gallery <i class="fa fa-chevron-right"></i></a>
+          <a href="contact.html" class="btn btn-outline">Plan Trip</a>
+        </div>
+      </div>
+    </section>
+    <style>
+      /* Apply left-to-right animation to hero texts + buttons */
+.hero-inner h4,
+.hero-inner h1,
+.hero-inner p,
+.hero-cta1 {
+  opacity: 0;
+  transform: translateX(-50px); /* start from left */
+  animation: slideRight 1s ease forwards;
+}
+
+/* Stagger timing for sequential appearance */
+.hero-inner h4 {
+  animation-delay: 0.2s;
+}
+.hero-inner h1 {
+  animation-delay: 0.6s;
+}
+.hero-inner p {
+  animation-delay: 1s;
+}
+.hero-cta1 {
+  animation-delay: 1.4s;
+}
+
+/* Keyframes for left-to-right slide */
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Buttons hover effect */
+.hero-cta1 .btn {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-cta1 .btn:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+    </style>
+
+
+    <!-- Info -->
+    <section class="container info-grid">
+      <div class="card feature">
+        <img src="assets/Meenakshi Temple.jpeg" alt="Meenakshi Temple">
+        <h3>Maeenakshi Temple</h3>
+        <p>From the gopurams of Madurai to Brihadeeswara’s grandeur, the temple architecture is awe-inspiring.</p>
+        <p>2 days in Maeenakshi Temple - ₹10,000</p>
+        <button class="btn" id="btn1">Book Now</button>
+     </div>
+
+      <div class="card feature">
+        <img src="assets/Ooty hills.jpeg" alt="Ooty hills">
+        <h3>Ooty hills</h3>
+        <p>From the rolling tea gardens to misty blue hills, Ooty’s charm is simply enchanting</p>
+        <p>2 days in Ooty hills - ₹15,000</p>
+        <button class="btn" id="btn2">Book Now</button>
+      </div>
+
+      <div class="card feature">
+        <img src="assets/Beaches & Coast.jpeg" alt="Marina Beach">
+        <h3>Beaches & Coast</h3>
+        <p>Sunrise along Marina Beach or serene coves in Mahabalipuram — coastal charm abounds.</p>
+        <p>1 day in Marina Beach- ₹5000</p>
+        <button class="btn" id="btn3">Book Now</button>
+      </div>
+
+      <div class="card feature">
+        <img src="assets/Beaches & Coast.jpeg" alt="Rameshvaram">
+        <h3>Beaches & Coast</h3>
+        <p>Sacred shores and the endless Pamban Bridge — Rameshwaram breathes divinity.</p>
+        <p>2 day in Rameshvaram- ₹15000</p>
+        <button class="btn" id="btn4">Book Now</button>
+      </div>
+
+      <div class="card feature">
+        <img src="assets/Thanjavur.jpeg" alt="Thanjavur">
+        <h3>Thanjavur</h3>
+        <p>Majestic Brihadeeswara Temple and timeless art — Thanjavur echoes with heritage.</p>
+        <p>2 day in Thanjavur- ₹15000</p>
+        <button class="btn" id="btn5">Book Now</button>
+      </div>
+
+      <div class="card feature">
+        <img src="assets/Silver beach.jpeg" alt="Chennai">
+        <h3>Silver beach</h3>
+        <p>Tranquil Silver Beach and golden sands — Cuddalore whispers with serenity.</p>
+        <p>2 day in Thanjavur- ₹15000</p>
+        <button class="btn" id="btn6">Book Now</button>
+      </div>
+    </section>
+
+    <style>
+/* Grid container */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+  gap: 20px;
+  justify-items: center; /* Center cards */
+  align-items: start;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto; /* Center whole section */
+}
+
+/* Card styling */
+.card.feature {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: center;
+  max-width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card.feature:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+/* Image */
+.card.feature img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Heading */
+.card.feature h3 {
+  margin: 10px 0;
+  font-size: 20px;
+  color: #333;
+}
+
+/* Text */
+.card.feature p {
+  font-size: 14px;
+  color: #555;
+  margin: 8px 0;
+}
+
+/* Button */
+.card.feature .btn {
+  margin-top: 12px;
+  background: #0077cc;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.card.feature .btn:hover {
+  background: #005fa3;
+}
+</style>
+
+    <!-- Info text -->
+    <section class="container prose">
+      <p>
+        Tamil Nadu is a land of ancient traditions and vibrant culture in southern India, known for its majestic temples, scenic hill stations, and golden beaches. Whether you're drawn to spiritual journeys, cultural heritage, or natural beauty, Tamil Nadu has something special for everyone. From the towering gopurams of Madurai and Thanjavur to the serene Nilgiri Hills, and from classical dance and music to colorful festivals, this captivating state offers a perfect blend of history, art, and breathtaking landscapes.
+      </p>
+    </section>
+
+    <!-- Quick tour cards -->
+    <section class="container tours">
+      <h2>Popular Experiences</h2>
+      <div class="tours-grid">
+        <article class="tour">
+          <img src="assets/Thanjavur.jpeg" alt="">
+          <h4>Thanjavur - Art & Temple</h4>
+          <p>Explore Chola masterpieces and classical art forms.</p>
+        </article>
+
+        <article class="tour">
+          <img src="assets/Beaches & Coast.jpeg" alt="">
+          <h4>Rameswaram - Pilgrimage</h4>
+          <p>Spiritual shores and island temples.</p>
+        </article>
+
+        <article class="tour">
+          <img src="assets/Chennai - Urban Culture.jpeg" alt="">
+          <h4>Chennai - Urban Culture</h4>
+          <p>Marina, music, museums and city life.</p>
+        </article>
+      </div>
+    </section>
+
+    <style>
+
+    .tour {
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.tour:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+      .tour img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Hover effect */
+.tour img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+    </style>
+
+    <!-- Testimonials small -->
+    <section class="container testimonials">
+      <h3>Traveler Stories</h3>
+      <div class="test-row">
+        <blockquote>
+          <p>"The sunrise at Ooty was otherworldly — a memory forever."</p>
+          <cite>— Ananya, Mumbai</cite>
+        </blockquote>
+        <blockquote>
+          <p>"Meenakshi Temple left me speechless. Colors, carvings, devotion."</p>
+          <cite>— John, UK</cite>
+        </blockquote>
+      </div>
+      <a href="reviews.html" class="link">Read more reviews →</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <h4>ExploreTN</h4>
+        <p>Discover the many faces of Tamil Nadu — culture, nature, and timeless tradition.</p>
+      </div>
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="copyright">© <span id="year"></span> ExploreTN • All rights reserved</div>
+  </footer>
+
+  <style>
+
+     /* Center the copyright text */
+.copyright {
+  margin-top: 0%;
+  text-align: center;       /* centers the text */
+  padding:5px 0px;          /* optional spacing */
+  font-size: 14px;          /* adjust font size */
+  color: #555;              /* text color */
+  background-color: #f5f5f5; /* optional background */
+}
+
+/* Optional: make it slightly bold */
+.copyright span {
+  font-weight: 500;
+}
+    .footer-links {
+  display: flex;
+  gap: 20px;
+  justify-content: center; /* center in footer */
+  margin-top: 20px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Assign different colors */
+.footer-links a:nth-child(1) { color: #ff5722; } /* About - Orange */
+.footer-links a:nth-child(2) { color: #4caf50; } /* Gallery - Green */
+.footer-links a:nth-child(3) { color: #2196f3; } /* Contact - Blue */
+
+/* Hover effect */
+.footer-links a:hover {
+  transform: scale(1.1);
+  text-decoration: underline;
+}
+
+  </style>
+
+  <script>
+    // Mobile menu toggle
+    const mobileToggle = document.querySelector(".mobile-toggle");
+    const navMenu = document.querySelector(".main-nav");
+    mobileToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("show");
+    });
+
+    // Book Now button action
+    const bookNowBtn = document.getElementById("bookNow");
+    bookNowBtn.addEventListener("click", () => {
+      alert("✅ Your booking is confirmed!");
+
+    });
+
+    var btn = document.getElementById("btn1")
+    btn.addEventListener("click",function(){
+      alert(" Your booking is confirmed!")
+    });
+
+     var btn = document.getElementById("btn2")
+    btn.addEventListener("click",function(){
+      alert(" Your booking is confirmed!")
+    });
+
+     var btn = document.getElementById("btn3")
+    btn.addEventListener("click",function(){
+      alert(" Your booking is confirmed!")
+    });
+
+     var btn = document.getElementById("btn4")
+    btn.addEventListener("click",function(){
+      alert(" Your booking is confirmed!")
+    });
+
+     var btn = document.getElementById("btn5")
+    btn.addEventListener("click",function(){
+      alert(" Your booking is confirmed!")
+    });
+
+     var btn = document.getElementById("btn6")
+    btn.addEventListener("click",function(){
+      alert(" Your booking is confirmed!")
+    });
+
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
